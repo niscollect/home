@@ -1,0 +1,301 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DonateKindly - In-Kind Donation Platform</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        nav {
+            background: white;
+            padding: 1rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #e91e63;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: #e91e63;
+            color: white;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid #e91e63;
+            color: #e91e63;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+            transform: translateY(-1px);
+        }
+
+        .hero {
+            background: #f8f9fa;
+            padding: 4rem 1rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            color: #666;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        .search-section {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .search-container {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .search-box {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .search-input {
+            flex: 1;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .donation-types {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 1rem;
+        }
+
+        .donation-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .donation-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .card-icon {
+            width: 60px;
+            height: 60px;
+            background: #e3f2fd;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+        }
+
+        .donation-card h3 {
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .donation-card p {
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        .featured-orgs {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 1rem;
+        }
+
+        .org-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .org-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .org-card h3 {
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .org-card p {
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        h2.section-title {
+            text-align: center;
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .search-box {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span>♥</span>
+                <span>DonateKindly</span>
+            </a>
+            <div class="nav-links">
+                <button class="btn btn-outline">How It Works</button>
+                <button class="btn btn-outline">Browse</button>
+                <button class="btn btn-outline">Sign In</button>
+                <button class="btn btn-primary">Get Started</button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1>Make a Difference Through<br>In-Kind Donations</h1>
+        <p>Connect with organizations in need and donate items that make a real impact.</p>
+        <button class="btn btn-primary">Start Donating</button>
+    </section>
+
+    <section class="search-section">
+        <div class="search-container">
+            <div class="search-box">
+                <input type="text" class="search-input" placeholder="Search for items or organizations">
+                <button class="btn btn-primary">Search</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="donation-types">
+        <h2 class="section-title">Choose How to Donate</h2>
+        <div class="donation-grid">
+            <div class="donation-card">
+                <div class="card-icon">🎁</div>
+                <h3>Individual Donation</h3>
+                <p>Perfect for personal contributions and one-time donations.</p>
+                <button class="btn btn-primary">Donate as Individual</button>
+            </div>
+            <div class="donation-card">
+                <div class="card-icon">👥</div>
+                <h3>Group Donation</h3>
+                <p>Great for businesses, schools, and community organizations.</p>
+                <button class="btn btn-primary">Donate as Group</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="featured-orgs">
+        <h2 class="section-title">Featured Organizations</h2>
+        <div class="org-grid">
+            <div class="org-card">
+                <h3>Organization 1</h3>
+                <p>Currently seeking donations for their community support programs.</p>
+                <button class="btn btn-outline">View Needs</button>
+            </div>
+            <div class="org-card">
+                <h3>Organization 2</h3>
+                <p>Currently seeking donations for their community support programs.</p>
+                <button class="btn btn-outline">View Needs</button>
+            </div>
+            <div class="org-card">
+                <h3>Organization 3</h3>
+                <p>Currently seeking donations for their community support programs.</p>
+                <button class="btn btn-outline">View Needs</button>
+            </div>
+        </div>
+    </section>
+    <section class="footr">
+
+    </section>
+    <script>
+        // Add basic interactivity
+        document.querySelectorAll('.btn').forEach(button => {
+            button.addEventListener('click', function() {
+                // You can add specific functionality for each button here
+                console.log('Button clicked:', this.textContent);
+            });
+        });
+
+        // Search functionality
+        const searchInput = document.querySelector('.search-input');
+        const searchButton = searchInput.nextElementSibling;
+
+        searchButton.addEventListener('click', function() {
+            const searchTerm = searchInput.value;
+            // You can implement search functionality here
+            console.log('Searching for:', searchTerm);
+        });
+    </script>
+</body>
+</html>
